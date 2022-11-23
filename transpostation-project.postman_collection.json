@@ -1,0 +1,561 @@
+{
+	"info": {
+		"_postman_id": "9c833ffb-0fce-4661-9b73-71a7dd184285",
+		"name": "transpostation-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"tusar\",\r\n    \"role\" : \"passanger\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get  all user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4321/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4321/api/users?id=637c9d003618682d9d8c4ce7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "637c9d003618682d9d8c4ce7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"name\": \"tusar choudhary\",\r\n    \"role\" : \"passanger\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/api/users/637baac4bbaf11489996662e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"users",
+								"637baac4bbaf11489996662e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4321/api/users/637baac4bbaf11489996662e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"users",
+								"637baac4bbaf11489996662e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "book a ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pickup_station\": \"637c9e450ac612baf6fa060b\",\r\n    \"drop_station\": \"637c9e720ac612baf6fa060d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/api/users/booking/637c9d003618682d9d8c4ce7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"users",
+								"booking",
+								"637c9d003618682d9d8c4ce7"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "637c9d003618682d9d8c4ce7",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "active route",
+			"item": [
+				{
+					"name": "create active route",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"superfast\",\r\n    \"driver_name\":\"637c9d003618682d9d8c4ce7\",\r\n    \"passangers\": [\"637c9d003618682d9d8c4ce7\"],\r\n    \"route\": \"637d168a0db45d47f2d9269b\",\r\n    \"next_station\": \"637c9e450ac612baf6fa060b\",\r\n    \"arrive_time\": \"25/11/2022 10:10:10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/api/activeRoute/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"activeRoute",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get  all activeRoute",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4321/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get activeRoute by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4321/api/activeRoute/637d1805a44c42f775d4e67a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"activeRoute",
+								"637d1805a44c42f775d4e67a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update activeRoute by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"superfast\",\r\n    \"driver_name\":\"637c9d003618682d9d8c4ce7\",\r\n    \"passangers\": [\"637c9d003618682d9d8c4ce7\"],\r\n    \"route\": \"637d168a0db45d47f2d9269b\",\r\n    \"next_station\": \"637c9e450ac612baf6fa060b\",\r\n    \"arrive_time\": \"25/11/2022 10:10:20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/api/activeRoute/637d1805a44c42f775d4e67a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"activeRoute",
+								"637d1805a44c42f775d4e67a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete activeRoute by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4321/api/activeRoute/637baac4bbaf11489996662e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"activeRoute",
+								"637baac4bbaf11489996662e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "stations",
+			"item": [
+				{
+					"name": "add station",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"newai\",\r\n    \"latitude\": 26.905967,\r\n    \"longitude\": 75.763150\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/api/stations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"stations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all stations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4321/api/stations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"stations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get station by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4321/api/stations/637c4af53111c6670b7d94c7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"stations",
+								"637c4af53111c6670b7d94c7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update station",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"tonk\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/api/stations/637c4af53111c6670b7d94c7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"stations",
+								"637c4af53111c6670b7d94c7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete station",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4321/api/stations/637c4af53111c6670b7d94c7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"stations",
+								"637c4af53111c6670b7d94c7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "route",
+			"item": [
+				{
+					"name": "create route",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"route_name\" : \"abc\",\r\n    \"stations\": [\"637c4ded3111c6670b7d94cd\", \"637c4e073111c6670b7d94cf\",\"637c4e193111c6670b7d94d1\" ]  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/api/route",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"route"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get routes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4321/api/route/637c4e7c3618682d9d8c4ce0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"route",
+								"637c4e7c3618682d9d8c4ce0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get route by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4321/api/route/637c4e7c3618682d9d8c4ce0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"route",
+								"637c4e7c3618682d9d8c4ce0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update route",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"route_name\" : \"abc\",\r\n    \"stations\": [\"637c4ded3111c6670b7d94cd\", \"637c4e073111c6670b7d94cf\" ]  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/api/route/637c4e7c3618682d9d8c4ce0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"route",
+								"637c4e7c3618682d9d8c4ce0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4321/api/route/637c4e7c3618682d9d8c4ce0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"api",
+								"route",
+								"637c4e7c3618682d9d8c4ce0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
